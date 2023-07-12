@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    background-color: #1f1e1e;
+    scroll-behavior: smooth;
+}
+#tooltip {
+    background-color: #333;
+    color: #fff;
+    border-radius: .8rem;
+    padding: .5rem;
+    font-size:.9rem;
+    border: 1px solid rgb(192, 132, 252);
+}
+@layer utilities {
+    .icons {
+      color: #d4d4d4;
+      font-size: 1.1rem;
+      background-color: transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+    }
+    .modal{
+      background-color: #3333336b;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      
+    }
+  }  
+    
+
+
