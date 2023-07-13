@@ -3,7 +3,7 @@ import {FaHouseUser} from "react-icons/fa";
 const IntroMe = () => {
 
   return (
-    <section id="intro" className=" max-w-[50rem] min-w-[25rem] lg:max-w-[80%] lg:min-w-[45rem] justify-center text-start m-auto 
+    <section id="intro" className=" max-w-[50rem] min-w-[22rem] lg:max-w-[80%] lg:min-w-[45rem] justify-center text-start m-auto 
       flex flex-col xl:mt-20 h-[80vh]">
       {/* intro area */}
 

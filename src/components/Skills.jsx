@@ -4,11 +4,11 @@ import { FaBootstrap, FaFigma, FaJs, FaReact } from "react-icons/fa"
 
 const Skills = () => {
   const Skills = [
-    {title:'React Js',icon:<FaReact />,effect:'left' },
-    {title:'Javascript',icon:<FaJs />,effect:'top'},
-    {title:'Tailwind',icon:<SiTailwindcss />,effect:'bottom'},
-    {title:'BootStrap',icon:<FaBootstrap />,effect:'right'},
-    {title:'Figma',icon:<FaFigma />,effect:'right'},
+    {title:'React Js',icon:<FaReact />},
+    {title:'Javascript',icon:<FaJs />},
+    {title:'Tailwind',icon:<SiTailwindcss />},
+    {title:'BootStrap',icon:<FaBootstrap />},
+    {title:'Figma',icon:<FaFigma />},
   ];
 
   return (
