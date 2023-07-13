@@ -1,7 +1,6 @@
 import { GiSkills } from "react-icons/gi"
 import { SiTailwindcss } from "react-icons/si"
 import { FaBootstrap, FaFigma, FaJs, FaReact } from "react-icons/fa"
-import {Bounce, Fade,Flip} from"react-reveal";
 
 const Skills = () => {
   const Skills = [
@@ -14,20 +13,17 @@ const Skills = () => {
 
   return (
     <section id="skills" className=" pt-28 max-w-[50rem] min-w-[25rem] lg:max-w-[80%] lg:min-w-[45rem] h-[70vh] text-start m-auto flex flex-col">
-      <Bounce left duration="2200">
-        <div className=" border md:border-2 border-purple-300 w-28 md:w-36 flex justify-evenly p-2 rounded-3xl text-center  ">
-          <GiSkills className="text-[1rem] md:text-[1.2rem] text-white" />
-          <p className="text-[.8rem] md:text-[1rem] text-white font-semibold">Skills</p>
-        </div>
-      </Bounce>
+
+      <div className=" border md:border-2 border-purple-300 w-28 md:w-36 flex justify-evenly p-2 rounded-3xl text-center  ">
+        <GiSkills className="text-[1rem] md:text-[1.2rem] text-white" />
+        <p className="text-[.8rem] md:text-[1rem] text-white font-semibold">Skills</p>
+      </div>
+
 
       <div className="p-3">
-        <Flip top duration='1700' delay='1000'>
-          <p className=" text-white text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] leading-normal">
-            Minhas principais <span className="text-purple-400">skills</span>. 
-          </p>
-        </Flip>
-        
+        <p className=" text-white text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] leading-normal">
+          Minhas principais <span className="text-purple-400">skills</span>. 
+        </p>
       </div>
 
       {/* Area icons Skills */}
@@ -37,12 +33,12 @@ const Skills = () => {
       
         {Skills.map((itens ,index) => (
           <div key={index} className="grid gap-1 sm:gap-5 text-center md:flex md:flex-col justify-center hover:scale-110 duration-200 ease-in-out">
-            <Fade key={index} delay={index * 200} duration='1200' {...itens.effect && { [itens.effect]: true}} >
+            <span key={index}>
             <span className="text-neutral-400 text-[4rem] sm:text-[8rem] hover:text-purple-400 hover:delay-75 delay-75 hover:transition-all cursor-pointer ">
               {itens.icon}
             </span>
             <label className="text-neutral-400 md:text-[1.2rem] font-bold">{itens.title}</label>  
-            </Fade>
+            </span>
           </div>
         ))
         }

@@ -10,7 +10,6 @@ import MenuHamburger from "./components/MenuHamburger"
 
 import { Tooltip } from "react-tooltip";
 
-
 function App() {
   
   return (
