@@ -4,7 +4,7 @@ import {AiOutlineMail} from "react-icons/ai";
 const Contact = () => {
 
   return (
-    <section id="contacts" className="max-w-[40rem] min-w-[20rem] lg:max-w-[80%] lg:min-w-[45rem] text-start mt-[5rem] m-auto flex flex-col mb-[5rem]">
+    <section id="contacts" className=" pt-28 max-w-[40rem] min-w-[20rem] lg:max-w-[80%] lg:min-w-[45rem] text-start mt-[5rem] m-auto flex flex-col mb-[5rem]">
 
       <div className=" border md:border-2 border-purple-300 w-28 md:w-36 flex justify-evenly p-2 rounded-3xl text-center  ">
         <AiOutlineMail className="text-[1rem] md:text-[1.2rem] text-white" />
