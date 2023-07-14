@@ -2,7 +2,7 @@ import { FaBuffer } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-28 max-w-[50rem] min-w-[25rem] lg:max-w-[80%] lg:min-w-[45rem] text-start m-auto flex flex-col">
+    <section id="projects" className="pt-28 max-w-[50rem] min-w-[20rem] lg:max-w-[80%] lg:min-w-[45rem] text-start m-auto flex flex-col">
 
         <div className=" border md:border-2  border-purple-300 w-28 md:w-36 flex justify-evenly p-2 rounded-3xl text-center  ">
         <FaBuffer className="text-[1rem] md:text-[1.2rem] text-white" />
@@ -10,17 +10,12 @@ const Projects = () => {
                 Projetos
             </p>
         </div>
-
     {/* Title section */}
-    
-
         <div className="p-3">
             <p className=" text-white text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] leading-normal">
             Meus <span className="text-purple-400">projetos</span>. 
             </p>
         </div>
-    
-
     {/* area projecsts */}
     
         <div className="md:grid md:grid-rows-3 md:grid-cols-2 md:gap-1 flex flex-col justify-center gap-3 md:max-w-[1200px] ">
