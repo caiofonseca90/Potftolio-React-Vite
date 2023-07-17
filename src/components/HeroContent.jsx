@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Herocontent = () => {
   return (
     // container
-    <div className="shadow-md rounded-3xl max-w-[50rem] min-w-[25 rem] m-auto mt-20 px-8 py-8 
+    <div className="shadow-md rounded-3xl max-w-[50em] min-w-[15rem] m-auto mt-5 px-5 py-8 mx-5
     xl:w-[20rem] xl:mx-2 xl:mt-20 2xl:mt-auto 2xl:w-full 2xl:h-screen 2xl:mx-4 2xl:rounded-none">
       {/* header area Nome + função */}
       <div className="flex flex-row justify-between m-auto 2xl:mt-10">
@@ -20,8 +20,8 @@ const Herocontent = () => {
 
       {/* area de contato */}
       <div className="mt-5 flex flex-col text-center 2xl:mt-8">
-        <span className="text-gray-300 text-2xl xl:text-[1.3rem] justify-center ">caiofonseca1990@gmail.com</span>
-        <span className="text-gray-300 text-2xl xl:text-[1.3rem] justify-center ">Lives in Santos-SP, Brazil</span>
+        <span className="text-gray-300 text-1xl xl:text-[1.3rem] justify-center ">caiofonseca1990@gmail.com</span>
+        <span className="text-gray-300 text-1xl xl:text-[1.3rem] justify-center ">Lives in Santos-SP, Brazil</span>
         <span className="text-purple-300 text-4 justify-center pt-5 opacity-60 ">@ 2023 Caio, All Rights Reserved</span>
       </div>
 

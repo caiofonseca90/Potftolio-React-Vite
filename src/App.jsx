@@ -13,12 +13,12 @@ import { Tooltip } from "react-tooltip";
 function App() {
   
   return (
-    <div className=" flex flex-col m-2">
+    <div className=" flex flex-col">
       <Tooltip id="tooltip" />
       <div className="max-xl:mt-8 xl:fixed z-20">
         <Herocontent />
       </div>
-      <div className="fixed right-0 z-30  ">
+      <div className="fixed right-0 z-30">
         <MenuHamburger />
       </div>
       <div className="fixed top-10 right-14 lg:top-80 bg-transparent z-30">

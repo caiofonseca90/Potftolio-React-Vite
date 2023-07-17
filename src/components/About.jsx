@@ -5,7 +5,7 @@ const AboutMe = () => {
   
   return (
     <div>
-      <section id="about" className=" pt-10 lg:pt-28 max-w-[50rem] min-w-[20rem] lg:max-w-[80%] lg:min-w-[45rem] text-start mb-[5rem] m-auto flex flex-col">
+      <section id="about" className=" pt-10 lg:pt-28 max-w-[50rem] min-w-[15rem] lg:max-w-[80%] lg:min-w-[45rem] text-start mb-[5rem] m-auto flex flex-col">
         <div className=" border md:border-2 border-purple-300 w-28 md:w-36 flex justify-evenly p-2 rounded-3xl text-center">
           <FaUser className="text-[1rem] md:text-[1.2rem] text-white" />
           <p className="text-[.8rem] md:text-[1rem] text-white font-semibold">Sobre</p>
