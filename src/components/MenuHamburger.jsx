@@ -19,16 +19,17 @@ const MenuHamburger = () => {
   return (
     <div className="min-[780px]:hidden">
       {/* hamb area */}
-      <div id="menuhamb" className="bg-black">
+      <div id="menuhamb">
         {openNavBar ? (
           // icon close menu
-          <div className=" flex flex-col h-[100%] w-[100%] modal items-end ">
+          <div className=" flex flex-col h-[100%] w-[100%] items-end modal ">
             <AiOutlineClose
               onClick={openNav}
               className="text-[2rem] hover:scale-125 hover:text-purple-400 
               text-neutral-200 cursor-pointer top-5 fixed right-5 bg-transparent ease-out z-50"
             />  
-            <nav className="container text-white w-[22rem] h-screen max-[510px]:w-screen max-[510px]:h-[40%] text-center duration-200 pt-28 shadow-md ">
+            <nav className="container text-white w-[22rem] h-screen 
+            max-[510px]:w-screen max-[510px]:h-[40%] text-center duration-200 pt-28 shadow-md">
               <ul className="flex flex-col justify-center gap-8 relative pb-10">
                 {Menu.map((menu,index) => (
                   <a href={menu.link} key={index}
@@ -44,7 +45,7 @@ const MenuHamburger = () => {
           <AiOutlineMenu 
             onClick={openNav}
             className="text-[2rem] hover:scale-125 hover:text-purple-400 
-            text-neutral-200 cursor-pointer top-10 fixed right-5 bg-transparent translate-x-0 ease-out "
+            text-neutral-200 cursor-pointer top-5 fixed right-5 bg-transparent translate-x-0 ease-out "
           />
         )}
       </div>

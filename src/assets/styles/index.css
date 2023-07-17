@@ -24,15 +24,12 @@
       flex-direction: row;
     }
     .modal{
-      background-color: #3333336b;
-      height: 100%;
-      width: 100%;
+      background-color: #333333b9;
       position: fixed;
       top: 0;
       right: 0;
       left: 0;
       bottom: 0;
-      
     }
   }  
     

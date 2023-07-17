@@ -15,7 +15,7 @@ const Herocontent = () => {
       </div>
       {/* Area de foto */}
       <div className="mt-8 2xl:mt-12">
-        <img className="rounded-3xl h-56 2xl:h-80 m-auto grayscale" src="../src/img/fotogit.jpg" alt="caio-fonseca" />
+        <img className="rounded-3xl h-56 2xl:h-80 m-auto grayscale" src="https://pps.whatsapp.net/v/t61.24694-24/353683627_511036621149715_2106993744089359544_n.jpg?ccb=11-4&oh=01_AdSQJiteGR_ays7ph2krG3cJ9aP2mtKPFuqB6xfrmfIX0Q&oe=64C25A6B" alt="caio-fonseca" />
       </div>
 
       {/* area de contato */}
@@ -35,7 +35,7 @@ const Herocontent = () => {
       {/* button hire-me */}
       <div className="mt-10 2xl:mt-36">
         <a href="#contacts">
-        <button  className="bg-purple-400 rounded-full text-center text-2xl font-bold cursor-pointer h-14 w-full shadow-md
+        <button className="bg-purple-400 rounded-full text-center text-2xl font-bold cursor-pointer h-14 w-full shadow-md
             hover:border-2 hover:border-purple-400 hover:bg-transparent hover:text-purple-500 transition-all delay-75">
             Hire-me
           </button>
