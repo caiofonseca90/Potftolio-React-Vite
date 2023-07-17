@@ -13,7 +13,7 @@ import { Tooltip } from "react-tooltip";
 function App() {
   
   return (
-    <div className=" flex flex-col">
+    <div className=" flex flex-col mx-2">
       <Tooltip id="tooltip" />
       <div className="max-xl:mt-8 xl:fixed z-20">
         <Herocontent />

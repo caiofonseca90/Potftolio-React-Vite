@@ -17,7 +17,7 @@ const Projects = () => {
         </div>
     {/* area projecsts */}
     
-        <div className="md:grid md:grid-rows-3 md:grid-cols-2 md:gap-1 flex flex-col justify-center gap-3 md:max-w-[1200px] border">
+        <div className="md:grid md:grid-rows-3 md:grid-cols-2 md:gap-1 flex flex-col justify-center gap-3 md:max-w-[1200px] ">
             {/* grid1 */}
             <div className="col-span-2 bg-transparent p-1 ">
                 <div className="flex flex-col justify-center overflow-hidden rounded-2xl">

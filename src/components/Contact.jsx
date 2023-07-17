@@ -1,8 +1,8 @@
 import {AiOutlineMail} from "react-icons/ai";
 
-
 const Contact = () => {
 
+  
   return (
     <section id="contacts" className=" pt-28 max-w-[40rem] min-w-[15rem] lg:max-w-[80%] lg:min-w-[45rem] text-start mt-[5rem] m-auto flex flex-col mb-[5rem]">
 

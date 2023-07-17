@@ -1,15 +1,24 @@
 import { useState, useEffect } from "react"
-import {AiOutlineToTop} from "react-icons/ai";
+// import {AiOutlineToTop} from "react-icons/ai";
+import { FaArrowUp } from "react-icons/fa";
 
 const BackToTop = () => {
-    const [backToTop, setBackToTop] = useState(false);
-
-    useEffect(() =>{
-        window.addEventListener('scroll', () =>{
-            window.screenY > 100 ? setBackToTop(true) : setBackToTop(false);
-        })
-    },[])
+    const [isButtonVisible, setIsButtonVisible] = useState(false);
+    // evento que verifica se a pagina está acima ou abaixo de 100vh, caso sim exibe o btn
+    useEffect(() => {
+        const handleScroll = () => {
+          setIsButtonVisible(window.scrollY > window.innerHeight);
+        };
     
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+    
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
+
+    // ao clicar no icone, a pagina volta ao topo
     const scrollTop = () => {
         window.scrollTo({
             top:0,
@@ -18,13 +27,13 @@ const BackToTop = () => {
     };
 
    return (
-    <div className="p-4 cursor-pointer bg-transparent ">
-        {backToTop || (
-            <button className=" py-4 px-4 rounded-full cursor-pointer
-            hover:delay-75 hover:transition-all hover:shadow font-bold "
+    <div className="bg-transparent ">
+        {isButtonVisible && (
+            <button className="cursor-pointer hover:delay-75 hover:transition-all ease-in-out hover:shadow font-bold
+             bg-neutral-800 rounded-full p-4 px-4 shadow-lg "
             data-tooltip-id="tooltip" data-tooltip-content="Ao topo"
             onClick={scrollTop}>
-                <AiOutlineToTop className="text-[1.6rem] lg:text-[2.3rem] bg-transparent text-purple-500 hover:scale-105"/>
+                <FaArrowUp className="text-[1rem] lg:text-[2.5rem] bg-transparent text-purple-500 hover:scale-105 " />
             </button>
         )}
     </div>
