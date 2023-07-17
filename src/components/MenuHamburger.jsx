@@ -17,7 +17,7 @@ const MenuHamburger = () => {
   }
   
   return (
-    <div className="min-[780px]:hidden ">
+    <div className="min-[780px]:hidden">
       {/* hamb area */}
       <div id="menuhamb" className="bg-black">
         {openNavBar ? (
@@ -28,7 +28,7 @@ const MenuHamburger = () => {
               className="text-[2rem] hover:scale-125 hover:text-purple-400 
               text-neutral-200 cursor-pointer top-5 fixed right-5 bg-transparent ease-out z-50"
             />  
-            <nav className="container text-white w-[22rem] h-screen max-[100%]:w-screen max-[510px]:h-[40%] text-center duration-200 pt-28 shadow-md">
+            <nav className="container text-white w-[22rem] h-screen max-[510px]:w-screen max-[510px]:h-[40%] text-center duration-200 pt-28 shadow-md border">
               <ul className="flex flex-col justify-center gap-8 relative pb-10 ">
                 {Menu.map((menu,index) => (
                   <a href={menu.link} key={index}

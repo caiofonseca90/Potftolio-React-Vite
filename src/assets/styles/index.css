@@ -25,6 +25,8 @@
     }
     .modal{
       background-color: #3333336b;
+      height: 100%;
+      width: 100%;
       position: fixed;
       top: 0;
       right: 0;
