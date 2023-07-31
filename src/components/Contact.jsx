@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {AiOutlineMail} from "react-icons/ai";
 
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
 const [name, setName] = useState('')
 const [phone, setPhone] = useState('')
@@ -15,6 +17,24 @@ function sendEmal(e){
     return;
   }
   alert('ENVIADO TESTE');
+
+  const templateParams ={
+    from_name: name,
+    message: message,
+    email: email,
+    phone: phone,
+  }
+
+  emailjs.send("service_bspffpc","template_bignr4m", templateParams,"vyAN4gbzM4W-5OdzS")
+  .then((response) => {
+    console.log('Email Enviado', response.status, response.text)
+    setName('')
+    setPhone('')
+    setEmail('')
+    setMessage('')
+  },(err)=>{
+    console.log('ERRO', err)
+  })
 }
   
   return (
