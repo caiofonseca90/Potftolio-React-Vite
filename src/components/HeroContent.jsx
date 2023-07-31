@@ -3,13 +3,13 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Herocontent = () => {
   return (
     // container
-    <div className="shadow-md rounded-3xl max-w-[50em] min-w-[15rem] m-auto mt-5 px-5 py-8 mx-5
-    xl:w-[20rem] xl:mx-2 xl:mt-20 2xl:mt-auto 2xl:w-full 2xl:h-screen 2xl:mx-4 2xl:rounded-none">
+    <div className="shadow-md rounded-3xl max-w-[50em] min-w-[15rem] m-auto mt-7 px-5 py-8 
+    xl:w-[20rem] xl:mx-3 xl:mt-20 2xl:mt-auto 2xl:w-full 2xl:h-screen 2xl:mx-4 2xl:rounded-none">
       {/* header area Nome + função */}
       <div className="flex flex-row justify-between m-auto 2xl:mt-10">
-        <h1 className="font-sans font-extrabold text-5xl text-gray-400 transition-colors duration-300 hover:from-left-to-right">Caio</h1>
+        <h1 className="font-sans font-extrabold text-5xl text-gray-400 transition-colors duration-300 from-left-to-right" >Caio</h1>
         <div className="flex flex-col w-full text-end">
-          <span className="font-san font-medium text-1xl text-purple-300 2xl:text-2xl ">Front-End developer</span>
+          <span className="font-san font-medium text-1xl text-purple-300 2xl:text-2xl">Front-End developer</span>
           <span className="font-san font- text-1xl text-purple-200 2xl:text-2xl">& UI Designer</span>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Herocontent = () => {
       </div>
 
       {/* Area socials */}
-      <div className="flex flex-row m-auto mt-6 justify-evenly w-56 2xl:mt-12">
+      <div className="flex flex-row m-auto mt-6 justify-evenly w-56 2xl:mt-12 ">
           <a href="https://instagram.com/_caioseca?igshid=MzNlNGNkZWQ4Mg=="><FaInstagram className="text-gray-400 text-3xl 2xl:text-4xl cursor-pointer hover:text-purple-400 transition-all delay-75" /></a>
           <a href="https://www.linkedin.com/in/caio-fonseca-01251217b/"><FaLinkedin className="text-gray-400 text-3xl 2xl:text-4xl cursor-pointer hover:text-purple-500 transition-all delay-75" /></a>
           <a href="https://github.com/caiofonseca90/"><FaGithub className="text-gray-400 text-3xl cursor-pointer 2xl:text-4xl hover:text-purple-400 transition-all delay-75" /></a>

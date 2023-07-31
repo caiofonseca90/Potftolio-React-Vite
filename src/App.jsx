@@ -15,13 +15,13 @@ function App() {
   return (
     <div className=" flex flex-col mx-2">
       <Tooltip id="tooltip" />
-      <div className="max-xl:mt-8 xl:fixed z-20">
+      <div className="max-xl:mt-8 xl:fixed z-20 mx-4">
         <Herocontent />
       </div>
       <div className="fixed right-0 z-30">
         <MenuHamburger />
       </div>
-      <div className="fixed top-10 right-14 lg:top-80 bg-transparent z-30">
+      <div className="fixed top-6 right-14 lg:top-80 bg-transparent z-30">
         <NavBar />
       </div>
       <div className="xl:ml-[21rem] 2xl:ml-[36rem] 2xl:w-[65vw]">

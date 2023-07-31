@@ -34,32 +34,64 @@
       left: 0;
       bottom: 0;
     }
+
     @keyframes fromLeftToRight {
-      0%,100% {
+      0% {
         background-position: 0%;
-        text-shadow: none;
-      }
-      50% {
+        }
+      100% {
         background-position: 100%;
-        text-shadow: -2px -2px 5px rgba(139, 22, 234, 0.4), 2px 2px 10px rgba(167, 4, 173, 0.6);
+        
       }
     }
-    
+   
     .from-left-to-right {
       background-image: linear-gradient(
         to right,
-        #ff00f7 0%,
-        #edc6f3 50%,
-        #86056e 100%
-        
+        #fff 0%,
+        #bf1dfa 50%,
+        #fff 100%
       );
-      background-size: 200% auto;
+
+      background-size: 500% auto;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: fromLeftToRight 1s linear infinite;
+      animation: fromLeftToRight 4s alternate infinite;
     }
-  }  
+
+    /* section-contacts */
+    .custom-label{
+      @apply text-neutral-100 text-[1rem] md:text-[1.2rem]
+    }
+
+
+    .custom-input-name{
+      @apply text-purple-400 placeholder:text-purple-400 placeholder:opacity-60 
+      pt-1 text-[.9rem] md:text-[1.1rem] outline-none
+    }
+      
+    .custom-input-phone{
+      @apply text-purple-400 placeholder:text-purple-400 placeholder:opacity-60 
+      pt-1 text-[.9rem] md:text-[1.1rem] outline-none
+    }
+
+    .custom-input-email{
+      @apply text-purple-400 placeholder:text-purple-400 placeholder:opacity-60 
+      pt-1 text-[.9rem] md:text-[1.1rem] outline-none
+    }
+
+    .custom-input-textarea{
+      @apply text-purple-400 placeholder:text-purple-400 placeholder:opacity-60 
+      pt-1 text-[.9rem] md:text-[1.1rem] outline-none resize-none
+    }
+    .custom-btn-contact{
+      @apply bg-purple-400 rounded-full text-center text-[1.2rem] md:text-2xl font-bold ml-3
+      cursor-pointer h-12 md:h-16 w-[12rem] md:w-[15rem] mt-[2rem] shadow-md hover:border-2 hover:border-purple-400 
+      hover:bg-transparent hover:text-purple-500 transition-all delay-75
+    }
     
+  }  
+
 
 
