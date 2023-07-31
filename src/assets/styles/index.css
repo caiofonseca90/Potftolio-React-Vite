@@ -14,6 +14,9 @@
     font-size:.9rem;
     border: 1px solid rgb(192, 132, 252);
 }
+
+
+
 @layer utilities {
     .icons {
       color: #d4d4d4;
@@ -30,6 +33,31 @@
       right: 0;
       left: 0;
       bottom: 0;
+    }
+    @keyframes fromLeftToRight {
+      0%,100% {
+        background-position: 0%;
+        text-shadow: none;
+      }
+      50% {
+        background-position: 100%;
+        text-shadow: -2px -2px 5px rgba(139, 22, 234, 0.4), 2px 2px 10px rgba(167, 4, 173, 0.6);
+      }
+    }
+    
+    .from-left-to-right {
+      background-image: linear-gradient(
+        to right,
+        #ff00f7 0%,
+        #edc6f3 50%,
+        #86056e 100%
+        
+      );
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: fromLeftToRight 1s linear infinite;
     }
   }  
     

@@ -7,7 +7,7 @@ const Herocontent = () => {
     xl:w-[20rem] xl:mx-2 xl:mt-20 2xl:mt-auto 2xl:w-full 2xl:h-screen 2xl:mx-4 2xl:rounded-none">
       {/* header area Nome + função */}
       <div className="flex flex-row justify-between m-auto 2xl:mt-10">
-        <h1 className="font-sans font-extrabold text-5xl text-gray-400 ">Caio</h1>
+        <h1 className="font-sans font-extrabold text-5xl text-gray-400 transition-colors duration-300 hover:from-left-to-right">Caio</h1>
         <div className="flex flex-col w-full text-end">
           <span className="font-san font-medium text-1xl text-purple-300 2xl:text-2xl ">Front-End developer</span>
           <span className="font-san font- text-1xl text-purple-200 2xl:text-2xl">& UI Designer</span>
@@ -17,8 +17,6 @@ const Herocontent = () => {
       <div className="mt-8 2xl:mt-12">
         <img className="rounded-3xl h-56 2xl:h-80 m-auto grayscale" src="https://media.licdn.com/dms/image/D4D03AQEwgZwelUNgOg/profile-displayphoto-shrink_800_800/0/1687131954910?e=1696464000&v=beta&t=-c9g8MaEJwjYoetzNeB0m7GRwPPB-M7CfJ_FfeiWS2o" alt="caio-fonseca" />
       </div>
-      
-
       {/* area de contato */}
       <div className="mt-5 flex flex-col text-center 2xl:mt-8">
         <span className="text-gray-300 text-1xl xl:text-[1.3rem] justify-center ">caiofonseca1990@gmail.com</span>

@@ -28,7 +28,7 @@ const MenuHamburger = () => {
           <div className=" flex flex-col h-[100%] w-[100%] items-end modal ">
             <AiOutlineClose
               onClick={openNav}
-              className="text-[2rem] hover:scale-125 hover:text-purple-400 
+              className="text-[1.7rem] hover:scale-125 hover:text-purple-400 
               text-neutral-200 cursor-pointer top-5 fixed right-5 bg-transparent ease-out z-50"
             />  
             <nav className="container text-white w-[22rem] h-screen 
@@ -49,7 +49,7 @@ const MenuHamburger = () => {
           // icon open menu
           <AiOutlineMenu 
             onClick={openNav}
-            className="text-[2rem] hover:scale-125 hover:text-purple-400 
+            className="text-[1.7rem] hover:scale-125 hover:text-purple-400 
             text-neutral-200 cursor-pointer top-5 fixed right-5 bg-transparent translate-x-0 ease-out "
           />
         )}
