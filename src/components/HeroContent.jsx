@@ -15,8 +15,9 @@ const Herocontent = () => {
       </div>
       {/* Area de foto */}
       <div className="mt-8 2xl:mt-12">
-        <img className="rounded-3xl h-56 2xl:h-80 m-auto grayscale" src="https://pps.whatsapp.net/v/t61.24694-24/353683627_511036621149715_2106993744089359544_n.jpg?ccb=11-4&oh=01_AdSQJiteGR_ays7ph2krG3cJ9aP2mtKPFuqB6xfrmfIX0Q&oe=64C25A6B" alt="caio-fonseca" />
+        <img className="rounded-3xl h-56 2xl:h-80 m-auto grayscale" src="https://media.licdn.com/dms/image/D4D03AQEwgZwelUNgOg/profile-displayphoto-shrink_800_800/0/1687131954910?e=1696464000&v=beta&t=-c9g8MaEJwjYoetzNeB0m7GRwPPB-M7CfJ_FfeiWS2o" alt="caio-fonseca" />
       </div>
+      
 
       {/* area de contato */}
       <div className="mt-5 flex flex-col text-center 2xl:mt-8">

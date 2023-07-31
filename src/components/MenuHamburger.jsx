@@ -2,6 +2,8 @@ import { useState } from "react"
 import {AiOutlineClose,AiOutlineMenu} from "react-icons/ai"
 
 const MenuHamburger = () => {
+  const [openNavBar, setOpenNavBar] = useState(false);
+  
   const Menu = [
     {title:'Introdução',link:'#intro'},
     {title:'Sobre',link:'#about'},
@@ -10,10 +12,11 @@ const MenuHamburger = () => {
     {title:'Contato',link:'#contacts'},
   ];
   
-  const [openNavBar, setOpenNavBar] = useState(false);
-  
   function openNav () {
     setOpenNavBar(!openNavBar);
+  }
+  function closeNav() {
+    setOpenNavBar(false);
   }
   
   return (
@@ -32,7 +35,9 @@ const MenuHamburger = () => {
             max-[510px]:w-screen max-[510px]:h-[40%] text-center duration-200 pt-28 shadow-md">
               <ul className="flex flex-col justify-center gap-8 relative pb-10">
                 {Menu.map((menu,index) => (
-                  <a href={menu.link} key={index}
+                  <a 
+                  onClick={closeNav}
+                  href={menu.link} key={index}
                   className="hover:text-purple-400 font-semibold hover:scale-110 bg-transparent duration-200 ">
                     {menu.title}
                   </a>
