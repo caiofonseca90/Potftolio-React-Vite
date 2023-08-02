@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {AiOutlineMail} from "react-icons/ai";
-
+import InputMask from 'react-input-mask';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -9,32 +9,35 @@ const [phone, setPhone] = useState('')
 const [email, setEmail] = useState('')
 const [message, setMessage] = useState('')
 
-function sendEmal(e){
-  e.preventDefault();
 
-  if( name ==='' || phone ==='' || email === '' || message === ''){
+function sendEmail(e){
+  e.preventDefault();
+  
+if( name === '' || phone === ''|| email === '' || message === ''){
     alert('Prencha todos os campos!')
     return;
+  }else{
+    const templateParams ={
+      from_name: name,
+      email: email,
+      phone: phone,
+      message: message,
+    }
+   emailjs.send("service_bspffpc","template_bignr4m", templateParams,"vyAN4gbzM4W-5OdzS")
+    .then((response) => {
+      console.log('Email Enviado', response.status, response.text)
+      setName('')
+      setPhone('')
+      setEmail('')
+      setMessage('')
+    },(err)=>{
+      console.log('ERRO', err)
+    })
+    alert('Sua mensagem foi enviada!')
   }
-  alert('ENVIADO TESTE');
 
-  const templateParams ={
-    from_name: name,
-    message: message,
-    email: email,
-    phone: phone,
-  }
-
-  emailjs.send("service_bspffpc","template_bignr4m", templateParams,"vyAN4gbzM4W-5OdzS")
-  .then((response) => {
-    console.log('Email Enviado', response.status, response.text)
-    setName('')
-    setPhone('')
-    setEmail('')
-    setMessage('')
-  },(err)=>{
-    console.log('ERRO', err)
-  })
+  // parametro passado de acordo com template do emailJs
+  
 }
   
   return (
@@ -48,56 +51,63 @@ function sendEmal(e){
         Vamos trabalhar<span className="text-purple-400"> juntos</span> ?
         </p>
       </div>
-      <form className="flex flex-col justify-center" onSubmit={sendEmal}>
+
+      <form className="flex flex-col justify-center" onSubmit={sendEmail}>
         <div className=" grid grid-flow-col grid-cols-2 grid-rows-2  gap-[3rem] p-3">
             <div className="flex flex-col gap-3">
-                <label htmlFor="namePerson" className="custom-label">
-                  Nome Completo  <span className="text-purple-300">*</span>
-                </label>
-                <input name="namePerson"
-                type="text" 
-                placeholder="Nome Completo" 
+              <label htmlFor="namePerson" className="custom-label">
+                Nome Completo  <span className="text-purple-300">*</span>
+              </label>
+              <InputMask 
+                mask=""
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
                 className="custom-input-name" 
-                value={name}
                 onChange={(e) => setName(e.target.value)}/>
             </div>
 
             <div className="flex flex-col gap-3">
-                <label htmlFor="telPhone" className="custom-label">
-                  Telefone <span className="text-purple-300 text-[1rem]">(opcinal)</span>
-                </label>
-                <input name="telPhone" 
+              <label htmlFor="telPhone" className="custom-label">
+                Telefone <span className="text-purple-300 text-[1rem]">(opcinal)</span>
+              </label>
+              <InputMask 
+                name="telPhone" 
+                mask ="(99) 9999-9999"
                 type="text" 
-                placeholder="Seu número" 
+                placeholder="(XX) XXXX-XXXX" 
                 className="custom-input-phone" 
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}/>
             </div>
 
             <div className="flex flex-col gap-3 ">
-                <label htmlFor="email" className="custom-label">
-                  E-mail <span className="text-purple-300 text-[1rem]">*</span>
-                </label>
-                <input name="email" 
-                type="text" 
-                placeholder="E-mail" 
-                className="custom-input-email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}/>
+              <label htmlFor="email" className="custom-label">
+                E-mail <span className="text-purple-300 text-[1rem]">*</span>
+              </label>
+              <InputMask
+              name="email" 
+              type="text" 
+              placeholder="E-mail" 
+              className="custom-input-email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}/>
             </div>
         </div>
 
         <div className="flex flex-col gap-3 col-span-2  mt-[3rem] p-3">
-            <label htmlFor="textarea" className="custom-label">
-              Mensagem <span className="text-purple-300 text-[1rem]">*</span>
-            </label>
-            <textarea name="textarea" 
+          <label htmlFor="textarea" className="custom-label">
+            Mensagem <span className="text-purple-300 text-[1rem]">*</span>
+          </label>
+          <textarea 
+            name="textarea" 
             type="text" 
-            placeholder="Em que posso lhe ajudar?" rows='5'
+            placeholder="Em que posso lhe ajudar?" 
+            rows='5'
             className="custom-input-textarea"
             value={message}
             onChange={(e) => setMessage(e.target.value)}/>
-        </div>
+          </div>
 
         <span className="h-[.45px] rounded-full w-full bg-purple-300 "></span>
         <button className="custom-btn-contact">Fale comigo</button>
